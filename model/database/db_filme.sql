@@ -400,10 +400,10 @@ select nome, avg(avaliacao) as media from tbl_filme;
 select sum(valor) as total from tbl_filme; 
 
 #format() permite alterar uma formataçao especifica (pt-BR) unidade monetária do brasil
-select concat('R$', format (sum(valor), 'pt-BR')) as total from tbl_filme; 
+select concat('R$', format (sum(valor), 'pt-BR')) as total from tbl_filme;
 
 
-
-
-
-
+#Calculando o lucro de 30% com base na soma dos valores do filme
+select concat('R$ ', format (sum(valor), 'pt-BR')) as total,
+	   concat('R$ ', format (((30 * sum(valor)) / 100) + sum(valor), 'pt-BR')) as total_lucro
+	from tbl_filme;
