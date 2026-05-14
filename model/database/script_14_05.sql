@@ -35,3 +35,26 @@ select time_format(curtime(), '%T') as hora_formatada; #Formato 24horas
 select hour(current_time()) as hora;
 select minute(current_time()) as minuto;
 select second(current_time()) as segundo;
+
+
+# FORMATAÇÃO DE DATA ->
+select date_format(current_date(), '%W') as data_formatada;
+select date_format('2007-03-24', '%W') as data_formatada; #Retorna o dia da semana com base na data informada
+select date_format('2026-05-10', '%w') as data_formatada; #Retorna o número do dia da semana sendo de 1 a 7
+
+select date_format(current_date(), '%a') as data_formatada; #Retorna o dia da semana abreviado em 3 digitos
+
+select date_format(current_date(), '%M') as mes_formatado; #Retorna o mês atual referente a data
+select date_format(current_date(), '%m') as mes_formatado; #Retorna o mês atual em numeral referente a data
+
+select date_format('2026-10-10', '%b') as mes_formatado; #Retorna o mês de forma abreviada (3 digitos) referente a data
+
+#Retorna o ano (00 ou 0000)
+select date_format(current_date(), '%Y') as ano_formatado; 
+select date_format(current_date(), '%y') as ano_formatado;
+
+
+select date_format(current_date(), '%d/%m/%Y') as data_formatada; #Retorna o dia da semana formatado em pt-br
+
+select id, nome, sinopse, data_lancamento, date_format(data_lancamento, '%d/%m/%Y') as data_formatada
+	from tbl_filme;
