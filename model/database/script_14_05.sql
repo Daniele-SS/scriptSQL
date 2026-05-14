@@ -65,3 +65,23 @@ select date_format(current_date(), '%d/%m/%Y') as data_formatada; #Retorna o dia
 
 select id, nome, sinopse, data_lancamento, date_format(data_lancamento, '%d/%m/%Y') as data_formatada
 	from tbl_filme;
+
+
+#Funções para retornar o dia, mês e ano ->
+select day(current_date()) as data_formatada;
+select month(current_date()) as data_formatada;
+select year(current_date()) as data_formatada;
+
+
+#Funções para cálculo ->
+select timediff('08:30:00', current_time()) as diferenca; #Retorna a diferença de horas
+
+select (datediff('2026-05-10', '2026-05-13')*-1) as diferenca; #Retorna a diferença de dias, o -1 foi utilizado para que o resultado fique positivo
+
+select year(current_date()) - year('1977-02-09') as diferenca; #Retorna a idade de uma pessoa
+
+select concat(year(current_date()) - year('1977-02-09'), ' anos') as idade; #Retorna a idade da pessoa concatenando com a palavra 'anos'
+
+#Retorna somente a data ou a hora de um valor que tem dois juntos
+select date(current_timestamp()) as data_atual;
+select time(current_timestamp()) as hora_atual;
