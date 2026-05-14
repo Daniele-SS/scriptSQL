@@ -52,7 +52,27 @@ insert into tbl_classificacao (sigla, caracteristicas, nome)
                 '18+'
                 );
 
-
+insert into tbl_filme(
+    nome,
+    data_lancamento,
+    duracao,
+    sinopse,
+    avaliacao,
+    valor,
+    capa,
+    id_classificacao
+)
+values
+(
+    'The Legend of Zelda: O Reino Perdido',
+    '2025-11-18',
+    '02:05:00',
+    'Link precisa salvar Hyrule após o despertar de uma antiga ameaça escondida nas profundezas do reino.',
+    '5',
+    '62.90',
+    'https://upload.wikimedia.org/wikipedia/en/3/36/Zelda_Tears_of_the_Kingdom_cover.jpg',
+    3
+);
 
 
 
