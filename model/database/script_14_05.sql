@@ -47,6 +47,13 @@ select date_format(current_date(), '%a') as data_formatada; #Retorna o dia da se
 select date_format(current_date(), '%M') as mes_formatado; #Retorna o mês atual referente a data
 select date_format(current_date(), '%m') as mes_formatado; #Retorna o mês atual em numeral referente a data
 
+#Reorna o dia ->
+select date_format(current_date(), '%d') as data_formatada;
+select date_format(current_date(), '%D') as data_formatada; #Formato Ordinal
+select date_format(current_date(), '%e') as data_formatada;
+
+select date_format(current_date(), '%j') as data_formatada; #Retorna o dia do ano
+
 select date_format('2026-10-10', '%b') as mes_formatado; #Retorna o mês de forma abreviada (3 digitos) referente a data
 
 #Retorna o ano (00 ou 0000)
